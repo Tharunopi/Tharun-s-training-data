@@ -1,0 +1,12 @@
+Part 1(Data preprocessing)
+ * uploading dataset
+ * feature scaling(normalization)
+ * creating data structure(here 60 timestamp and 1 output)
+ * reshaping 2d to 3d
+
+Part 2(Creating RNN)
+ * initalize rnn
+ * add lstm layer and dropout layer
+ * add output layer
+ * compile the model
+ * fit the model
