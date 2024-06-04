@@ -1,1 +1,2 @@
 boltzman machine helps us to create a model that describes the system.
+the traning process stops when the machine able to construct our exact input.
