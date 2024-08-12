@@ -4,6 +4,7 @@ def segment(a):
     last = None
     for i in a:
         x, y = i[0], i[1]
+        print(x, y)
         if last is None or last < x:
             seg.append(y)
             last = y
