@@ -1,10 +1,11 @@
-def navie_poly_multiplication(a, b):
-    ans = [0] * (len(a) + len(b) -1)
-    for i in range(len(a)):
-        for j in range(len(b)):
-            ans[i+j] += a[i] * b[j]
+def poly_mul(x, y):
+    ans = [0] * (len(a)+len(b)-1)
+    for i in range(len(x)):
+        for j in range(len(y)):
+            ans[i+j] += x[i] * y[j]
     return ans
 
-a = [3, 2, 5]
-b = [5, 1, 2]
-print(navie_poly_multiplication(a, b))
+a = [4, 3, 2, 1]
+b = [1, 2, 3, 4]
+print(poly_mul(a, b))
+
