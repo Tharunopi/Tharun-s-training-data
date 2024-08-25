@@ -1,23 +1,31 @@
-def sort(x):
-    if len(x) <=1:
+def merge_sort(x):
+    n = len(x)
+
+    if len(x) == 1:
         return x
-    mid = len(x)//2
+
+    mid = n//2
     left = x[:mid]
     right = x[mid:]
-    return merge(sort(left), sort(right))
+
+    left = merge_sort(left)
+    right = merge_sort(right)
+
+    return merge(left, right)
 
 def merge(left, right):
     ans = []
-    i, j = 0, 0
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            ans.append(left[i])
-            i+=1
+    l, r = 0, 0
+    while l < len(left) and r < len(right):
+        if left[l] < right[r]:
+            ans.append(left[l])
+            l+=1
         else:
-            ans.append(right[j])
-            j+=1
-    ans.extend(left[i:])
-    ans.extend(right[j:])
+            ans.append(right[r])
+            r+=1
+    ans.extend(left[l:])
+    ans.extend(right[r:])
     return ans
 
-print(sort([9, 3, 1, 7, 4]))
+x = [2, 4, 1, 3, 5]
+print(merge_sort(x))
