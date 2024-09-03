@@ -5,3 +5,5 @@ method that starts and ends with double underscore are known as magic methods. e
 magic methods are executed automatically when we run the python program
 
 assert statements are used to check the actual expectaion to whats happening now
+
+'__dict__' is a magic attribute used to print the attributes that are used in class or meathods
