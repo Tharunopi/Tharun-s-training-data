@@ -3,7 +3,7 @@ from collections import Counter
 def change(user_amt, actual_price):
     x = user_amt - actual_price
     value = []
-    denominations = {5: 100000, 2: 2, 1: 10}
+    denominations = {5: 100, 2: 2, 1: 10}
 
     for i, j in denominations.items():
         while x >= i and denominations[i] > 0:

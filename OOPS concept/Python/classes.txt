@@ -1,0 +1,7 @@
+self arguement is used to pass the method itself inside a method
+
+method that starts and ends with double underscore are known as magic methods. eg- '__init__'
+
+magic methods are executed automatically when we run the python program
+
+assert statements are used to check the actual expectaion to whats happening now
