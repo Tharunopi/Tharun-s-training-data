@@ -1,0 +1,41 @@
+Encapsulation:
+
+    ** Refers to the practice of bundling data (attributes) and methods (functions) that operate on that data into a single unit, called a class.
+    ** Data hiding:
+        public - accessed outside the class
+        private - accessed only within the class
+        protected - accessed within the class and sub class 
+    ** Provide access to methods to show the data using getters and setters
+
+Abstraction:
+
+    ** Refers to the process of simplifying complex systems by modeling classes based on the essential properties and behaviors while hiding unnecessary details.    
+    ** Abstraction allows you to focus on what an object does rather than how it does it.
+    ** For example, when using a car, you don’t need to understand the mechanics of the engine; you just need to know how to start and drive it.
+
+Inheritance:
+
+    ** Allows one class (called the subclass or child class) to inherit properties and behaviors (attributes and methods) from another class (called the superclass or parent class).
+    ** Two types of classes:
+        parent class or super class
+        child class or sub class
+    ** Types of Inheritance:
+        1. Single Inheritance:
+            A subclass inherits from only one superclass.
+        2. Multiple Inheritance:
+            A subclass inherits from more than one superclass.
+        3. Multilevel Inheritance: 
+            A subclass inherits from another subclass, creating a chain of inheritance.
+        4. Hierarchical Inheritance: 
+            Multiple subclasses inherit from the same superclass.
+        5. Hybrid Inheritance: 
+            A combination of two or more types of inheritance.
+Polymorphism:
+
+    ** Refers to the ability of a function, method, or operator to work in different ways depending on the objects it is dealing with.
+    ** Types of polymorphism
+        method overloading
+        method overridding
+        operator overloading
+    ** eg:
+        len() in python
