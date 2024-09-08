@@ -8,7 +8,6 @@ class phone(item):
             phone, price, quant    
         )
         
-        # validating arguements
         assert broken >= 0, "price should be greater than 0"
         
         self.broken = broken
