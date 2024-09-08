@@ -32,3 +32,4 @@ class EditDistance(Operation):
 
 op = EditDistance("nothing", "bread", "really")
 print(op.edit_distance())
+print()
