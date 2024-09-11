@@ -2,7 +2,7 @@ class Operation:
     def __init__(self, text:str):
         self.text = text
 
-    def longest_substring(self):
+    def longest_substring_1strings(self):
         n = []
         for i in self.text:
             if i not in n:

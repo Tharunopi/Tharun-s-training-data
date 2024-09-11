@@ -1,18 +1,13 @@
-from collections import Counter
-
-def change(user_amt, actual_price):
-    x = user_amt - actual_price
+def change(x):
     value = []
-    denominations = {5: 100, 2: 2, 1: 10}
+    denominations = [4, 3, 1]
 
-    for i, j in denominations.items():
-        while x >= i and denominations[i] > 0:
+    for i in denominations:
+        while x >= i:
             x -= i
             value.append(i)
-            denominations[i] -= 1
 
-    return Counter(value)
+    return (value)
 
-x = 3000
-y = 2212
-print(change(x, y))
+x = 34
+print(change(x))
