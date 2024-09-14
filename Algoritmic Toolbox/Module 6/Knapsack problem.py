@@ -30,15 +30,24 @@ class KnapSack:
         print(info)
         return ans, total_value
 
-    def optimal_repeative_knapsack(self):
-        pass
+    def optimal_without_repeative_knapsack(self):
+        n = len(self.items)
+        dp = [[0] * (self.weight + 1) for _ in range(n + 1)]
+
+        for i in range(1, n + 1):
+            for j in range(1, self.weight + 1):
+                if self.items[i - 1] <= j:
+                    dp[i][j] = max(self.cost[i - 1] + dp[i - 1][j - self.items[i - 1]], dp[i - 1][j])
+                else:
+                    dp[i][j] = dp[i - 1][j]
+        return dp[n][self.weight]
 
     def __repr__(self):
-        return f"object initalized with {self.weight}, {self.items}, {self.cost}"
+        return f"{self.__class__.__name__}({self.weight}, {self.items}, {self.cost})"
 
 items = [6, 3, 4, 2]
 cost = [30, 14, 16, 9]
 weight = 10
 
 problem = KnapSack(weight, items, cost)
-print(KnapSack.history)
+print(problem.optimal_without_repeative_knapsack())
