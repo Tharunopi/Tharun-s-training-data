@@ -1,1 +1,1 @@
-print(set('k', 'g', 'h'))
+print(3/2)

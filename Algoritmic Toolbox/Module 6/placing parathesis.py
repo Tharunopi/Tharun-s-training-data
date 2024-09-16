@@ -3,27 +3,32 @@ from flax.core.lift import switch
 
 class MaximumValue:
 
-    def __init__(self, x):
+    def __init__(self, x:str):
         self.x = x
 
-    def navie_method(self):
-        total_value = 0
-        for i in range(1, 8, 2):
-            match(self.x[i]):
-                case '+':
-                    total_value += self.x[i-1] + self.x[i+1]
-                    break
-                case '+':
-                    total_value += self.x[i - 1] - self.x[i + 1]
-                    break
-                case '+':
-                    total_value += self.x[i - 1] * self.x[i + 1]
-                    break
-                case '+':
-                    total_value += self.x[i - 1] / self.x[i + 1]
-                    break
-        return total_value
+    def not_optimal_solution(self):
+        min = float("inf")
+        max = float("-inf")
+        ans = []
+        mid = self.x[len(self.x)//2]
+        left = self.x[:len(self.x)//2]
+        right = self.x[(len(self.x) // 2)+1:]
+        ans.append(
+            (
+                eval('(5-8)+7'),
+                eval('5-(8+7)')
+            )
+        )
+        ans.append(
+            (
+                eval('(4-8)+9'),
+                eval('4-(8+9)')
+            )
+        )
+        for k in ans:
+            print(k)
+        return left,mid, right, ans
 
 
-item = MaximumValue([1, '+', 2, '-', 3, '*', 4, '-', 5])
-print(item.navie_method())
+item = MaximumValue('5-8+7*4-8+9')
+print(item.not_optimal_solution())
