@@ -7,7 +7,7 @@ cam = cv2.VideoCapture(0)
 cam.set(3, 500)
 cam.set(4, 250)
 
-model = YOLO("../Yolo models/yolov8n.pt")
+model = YOLO("../custom model/yolov8n.pt")
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
 "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
 "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella",

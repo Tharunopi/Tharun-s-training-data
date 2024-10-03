@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2, math
 import cvzone
 
-model = YOLO("../Yolo models/yolov8n.pt")
+model = YOLO("../custom model/yolov8n.pt")
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
 "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
 "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella",
