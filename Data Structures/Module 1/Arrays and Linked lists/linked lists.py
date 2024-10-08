@@ -54,10 +54,61 @@ def top_back(head):
     return cur
 
 def pop_back(head):
+    if head is None or head.next is None:
+        return None
     cur = head
-    while head:
-        if cur.next is None:
-            return
+    while cur.next.next:
+        cur = cur.next
+    cur.next = None
+    return head
+
+def erase(head, val):
+    if head is None:
+        return None
+    if head.head == val:
+        return head.next
+
+    cur = head
+    while cur.next:
+        if cur.next.head == val:
+            cur.next = cur.next.next
+            return head
+        cur = cur.next
+    return head
+
+def empty(head):
+    if head is None:
+        return True
+    else:
+        return False
+
+def add_before(head, key, val):
+    if head is None:
+        return Node(val)
+
+    cur = head
+    while cur.next:
+        if cur.next.head == key:
+            new_node1 = Node(val)
+            new_node1.next = cur.next
+            cur.next = new_node1
+            return head
+        cur = cur.next
+    return head
+
+def add_after(head, key, val):
+    if head is None:
+        return Node(val)
+
+    cur = head
+    while cur.next:
+        if cur.head == key:
+            new_node = Node(val)
+            new_node.next = cur.next
+            cur.next = new_node
+            return head
+        cur = cur.next
+    return head
 
 Head = Node(5)
 A = Node(6)
@@ -68,4 +119,5 @@ Head.next = A
 A.next = B
 B.next = C
 
-print(top_back(Head))
+c = add_after(Head, 6, 0)
+printing_elements(c)
