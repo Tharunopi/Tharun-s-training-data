@@ -86,6 +86,7 @@ class LinkedList:
             cur = cur.next
 
 item = LinkedList()
-item.push_front({"first": "oo"})
+item.push_front(10)
 item.push_back(100)
+item.add_after(10, 12)
 item.display()
