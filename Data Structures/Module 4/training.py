@@ -1,2 +1,4 @@
-r = [[3, "32"] for i in range(20)]
-print(r[0])
+s = "excel is the college located in namakkal district   excel is popular"
+for i in range(len(s)):
+    print(s[i: i+5])
+
