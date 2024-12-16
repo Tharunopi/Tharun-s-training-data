@@ -20,8 +20,6 @@ def converter(li):
                 nodes[i].left = nodes[left_index]
             if right_index < len(li) and right_index is not None:
                 nodes[i].right = nodes[right_index]
-            left_val = [nodes[i].left.val if nodes[i].left is not None else None]
-            right_val = [nodes[i].right.val if nodes[i].right is not None else None]
 
     return nodes[0]
 
