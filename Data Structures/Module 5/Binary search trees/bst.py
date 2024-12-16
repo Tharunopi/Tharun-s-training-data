@@ -13,3 +13,5 @@ def inorder(node):
 
 def list_to_bst(x):
     nodes = [Tree(i) for i in x]
+
+
